@@ -1,5 +1,29 @@
 const modalOverlay = document.getElementById("projectModal");
 const modalClose = modalOverlay?.querySelector(".modal-close");
+const siteHeader = document.querySelector(".site-header");
+const headerInner = document.querySelector(".header-inner");
+const mainNav = document.querySelector(".main-nav");
+
+if (headerInner && mainNav && !document.querySelector(".menu-button")) {
+  const menuButton = document.createElement("button");
+  menuButton.className = "menu-button";
+  menuButton.type = "button";
+  menuButton.setAttribute("aria-label", "Toggle navigation menu");
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.textContent = "Menu";
+  headerInner.insertBefore(menuButton, mainNav);
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = siteHeader?.classList.toggle("nav-open");
+    menuButton.setAttribute("aria-expanded", String(Boolean(isOpen)));
+  });
+
+  mainNav.addEventListener("click", (event) => {
+    if (!event.target.closest("a")) return;
+    siteHeader?.classList.remove("nav-open");
+    menuButton.setAttribute("aria-expanded", "false");
+  });
+}
 
 if (modalClose) {
   modalClose.addEventListener("click", () => {
