@@ -29,7 +29,7 @@
   </header>
 
   <main>
-    <section class="page-banner banner-awards reveal">
+    <!-- <section class="page-banner banner-awards reveal">
       <div class="banner-copy">
         <span class="eyebrow">Awards</span>
         <h1>An ongoing record of discerned design work and recognition.</h1>
@@ -38,7 +38,7 @@
       <div class="banner-image">
         <img src="assets/images/awards/cert.jpg" alt="Award recognition image" loading="lazy">
       </div>
-    </section>
+    </section> -->
 
     <section class="awards-preview reveal">
       <div class="section-heading">
@@ -57,20 +57,37 @@
           </div>
           <div class="award-media-gallery" aria-label="One Shenton LEAF Award media gallery">
             <div class="award-media-stage fit-contain">
-              <img class="award-media-image" src="assets/images/awards/cert.jpg" alt="One Shenton LEAF Award certificate" loading="lazy">
-              <video class="award-media-video" controls playsinline poster="assets/images/awards/cert.jpg" hidden></video>
-              <div class="award-media-placeholder" hidden>
-                <span>Video</span>
-                <p>Add a video file path in the gallery item to play it here.</p>
-              </div>
+              <div class="award-media-viewer"></div>
               <button class="award-media-arrow award-media-prev" type="button" aria-label="Previous award media">&lsaquo;</button>
               <button class="award-media-arrow award-media-next" type="button" aria-label="Next award media">&rsaquo;</button>
             </div>
+
             <div class="award-media-controls" aria-label="Select award media">
-              <button type="button" class="active" aria-pressed="true" data-type="image" data-fit="contain" data-src="assets/images/awards/cert.jpg" data-alt="One Shenton LEAF Award certificate">Cert</button>
-              <button type="button" aria-pressed="false" data-type="image" data-src="assets/images/projects/residential/eastCoast.png" data-alt="Residential landscape and interior project">News</button>
-              <button type="button" aria-pressed="false" data-type="image" data-src="assets/images/projects/residential/oneshenton.jpg" data-alt="One Shenton residential project">One Shenton</button>
-              <button type="button" aria-pressed="false" data-type="video" data-src="" data-poster="assets/images/awards/cert.jpg">Video</button>
+              <button type="button" class="active" aria-pressed="true" data-type="image" data-fit="contain"
+                data-src="assets/images/awards/cert.jpg" data-alt="One Shenton LEAF Award certificate">
+                Certificate
+              </button>
+
+              <button type="button" aria-pressed="false" data-type="image" data-fit="contain"
+                data-src="assets/images/awards/news.jpeg"
+                data-alt="Residential landscape and interior project">
+                Straits Times News
+              </button>
+
+              <button type="button" aria-pressed="false" data-type="video"
+                data-src="assets/images/awards/interview.mp4" data-alt="One Shenton interview video">
+                CNA Interview
+              </button>
+
+              <button type="button" aria-pressed="false" data-type="youtube" data-start="129"
+                data-src="https://youtu.be/gyzyrzat7bA?si=ZIFpHXcvr995pKNA" data-alt="One Shenton YouTube interview video">
+                NParks' LEAF Award 2023
+              </button>
+            </div>
+
+            <div class="award-media-lightbox" aria-hidden="true" hidden>
+              <button class="award-media-lightbox-close" type="button" aria-label="Close enlarged media">&times;</button>
+              <div class="award-media-lightbox-content"></div>
             </div>
           </div>
         </article>
@@ -124,6 +141,7 @@
                 target="_blank" rel="noopener noreferrer" aria-label="CKA Design LinkedIn">
                 in
             </a>
+            <p class="footer-copyright">&copy; 2026 All Rights Reserved.</p>
         </div>
     </div>
 </footer>
